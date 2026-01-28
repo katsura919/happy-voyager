@@ -9,7 +9,6 @@ import {
   Youtube,
   Mail,
   MapPin,
-  Phone,
 } from "lucide-react";
 
 const footerLinks = {
@@ -23,15 +22,15 @@ const footerLinks = {
   destinations: [
     { name: "Portugal", href: "#destinations" },
     { name: "Spain", href: "#destinations" },
-    { name: "Thailand", href: "#destinations" },
     { name: "Croatia", href: "#destinations" },
+    { name: "Thailand", href: "#destinations" },
     { name: "All Destinations", href: "#destinations" },
   ],
-  company: [
-    { name: "About Us", href: "#" },
-    { name: "Our Team", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Press", href: "#" },
+  resources: [
+    { name: "About Abie", href: "#" },
+    { name: "Success Stories", href: "#" },
+    { name: "Visa Guides", href: "#" },
+    { name: "FAQ", href: "#faq" },
     { name: "Blog", href: "#" },
   ],
   legal: [
@@ -97,28 +96,19 @@ export default function Footer() {
             </Link>
 
             <p className="font-[family-name:var(--font-body)] text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
-              Empowering digital nomads to live and work anywhere in the world.
-              Your gateway to location independence.
+              Hi, I&apos;m Abie! I help digital nomads turn their weak passports
+              into global freedom through clear, executable visa roadmaps.
             </p>
 
             {/* Contact info */}
             <div className="space-y-3">
               <a
-                href="mailto:hello@happyvoyager.com"
+                href="mailto:abie@happyvoyager.com"
                 className="flex items-center gap-3 text-white/60 hover:text-[#e3a99c] transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 <span className="font-[family-name:var(--font-body)] text-sm">
-                  hello@happyvoyager.com
-                </span>
-              </a>
-              <a
-                href="tel:+1234567890"
-                className="flex items-center gap-3 text-white/60 hover:text-[#e3a99c] transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span className="font-[family-name:var(--font-body)] text-sm">
-                  +1 (234) 567-890
+                  abie@happyvoyager.com
                 </span>
               </a>
               <div className="flex items-center gap-3 text-white/60">
@@ -182,13 +172,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Resources */}
           <div>
             <h4 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-white mb-4">
-              Company
+              Resources
             </h4>
             <ul className="space-y-3">
-              {footerLinks.company.map((link, index) => (
+              {footerLinks.resources.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}

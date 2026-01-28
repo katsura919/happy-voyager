@@ -9,6 +9,7 @@ const navLinks = [
   { name: "Destinations", href: "#destinations" },
   { name: "Process", href: "#process" },
   { name: "Pricing", href: "#pricing" },
+  { name: "Testimonials", href: "#testimonials" },
   { name: "FAQ", href: "#faq" },
 ];
 
@@ -72,7 +73,7 @@ export default function Header() {
               href="#contact"
               className="btn-primary inline-flex items-center gap-2 text-sm"
             >
-              <span>Start Your Journey</span>
+              <span>Let&apos;s Talk</span>
               <svg
                 className="w-4 h-4"
                 fill="none"
@@ -127,7 +128,7 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
               className="btn-primary text-center mt-4"
             >
-              Start Your Journey
+              Let&apos;s Talk
             </Link>
           </div>
         </div>

@@ -14,7 +14,7 @@ const steps = [
     icon: MessageSquare,
     title: "Free Consultation",
     description:
-      "Schedule a call to discuss your goals, timeline, and ideal destinations. We'll assess your eligibility and recommend the best visa options.",
+      "Schedule a call to discuss your goals, timeline, and ideal destinations. I'll assess your eligibility and recommend the best visa options.",
     color: "#e3a99c",
   },
   {
@@ -22,7 +22,7 @@ const steps = [
     icon: FileText,
     title: "Document Preparation",
     description:
-      "We provide a personalized checklist and guide you through gathering all required documents. Our team reviews everything for accuracy.",
+      "I provide a personalized checklist and guide you through gathering all required documents. Everything gets reviewed for accuracy.",
     color: "#bbcccd",
   },
   {
@@ -30,7 +30,7 @@ const steps = [
     icon: Send,
     title: "Application Submission",
     description:
-      "We handle the entire submission process, communicate with embassies on your behalf, and keep you updated on progress.",
+      "I handle the entire submission process, communicate with embassies on your behalf, and keep you updated on progress.",
     color: "#f2d6c9",
   },
   {
@@ -38,7 +38,7 @@ const steps = [
     icon: CheckCircle,
     title: "Approval & Beyond",
     description:
-      "Celebrate your approval! We continue to support you with arrival procedures, local registration, and ongoing compliance.",
+      "Celebrate your approval! I continue to support you with arrival procedures, local registration, and ongoing compliance.",
     color: "#e7ddd3",
   },
 ];
@@ -65,7 +65,7 @@ export default function ProcessSection() {
             <span className="italic text-[#e3a99c]">Freedom</span> in 4 Steps
           </h2>
           <p className="font-[family-name:var(--font-body)] text-lg text-[#6b6b6b] max-w-2xl mx-auto">
-            We&apos;ve simplified the complex visa process into a clear,
+            I&apos;ve simplified the complex visa process into a clear,
             stress-free journey. Here&apos;s what to expect.
           </p>
         </div>

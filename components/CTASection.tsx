@@ -1,6 +1,6 @@
 "use client";
 
-import { Plane, Mail, Calendar } from "lucide-react";
+import { Plane, Mail } from "lucide-react";
 
 export default function CTASection() {
   return (
@@ -75,40 +75,18 @@ export default function CTASection() {
                   <Mail className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#6b6b6b]/40" />
                 </div>
                 <div className="relative">
-                  <select
-                    className="w-full px-5 py-4 rounded-xl bg-[#f9f5f2] border border-[#e7ddd3] font-[family-name:var(--font-body)] text-[#3a3a3a] focus:outline-none focus:border-[#e3a99c] transition-colors appearance-none cursor-pointer"
-                    defaultValue=""
-                  >
-                    <option value="" disabled>
-                      Interested Destination
-                    </option>
-                    <option value="portugal">Portugal</option>
-                    <option value="spain">Spain</option>
-                    <option value="thailand">Thailand</option>
-                    <option value="croatia">Croatia</option>
-                    <option value="indonesia">Indonesia</option>
-                    <option value="other">Not Sure Yet</option>
-                  </select>
-                  <svg
-                    className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#6b6b6b]/40 pointer-events-none"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
+                  <textarea
+                    placeholder="Tell me about your nomad goals..."
+                    rows={3}
+                    className="w-full px-5 py-4 rounded-xl bg-[#f9f5f2] border border-[#e7ddd3] font-[family-name:var(--font-body)] text-[#3a3a3a] placeholder:text-[#6b6b6b]/60 focus:outline-none focus:border-[#e3a99c] transition-colors resize-none"
+                  />
                 </div>
                 <button
                   type="submit"
                   className="w-full py-4 rounded-xl bg-gradient-to-r from-[#e3a99c] to-[#d69586] text-white font-[family-name:var(--font-body)] font-semibold text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2"
                 >
-                  <Calendar className="w-5 h-5" />
-                  <span>Book Free Consultation</span>
+                  <Mail className="w-5 h-5" />
+                  <span>Send Message</span>
                 </button>
               </form>
 

@@ -35,14 +35,14 @@ const services = [
     icon: Users,
     title: "Family Visa Solutions",
     description:
-      "Bring your loved ones along. We handle dependent visas and family reunion applications.",
+      "Bring your loved ones along. I handle dependent visas and family reunion applications.",
     color: "#e7ddd3",
   },
   {
     icon: Clock,
     title: "Visa Extensions & Renewals",
     description:
-      "Never worry about expiration. We track deadlines and handle all renewal paperwork.",
+      "Never worry about expiration. I track deadlines and handle all renewal paperwork.",
     color: "#e3a99c",
   },
   {
@@ -65,7 +65,7 @@ export default function ServicesSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block font-[family-name:var(--font-body)] text-sm tracking-[0.2em] text-[#e3a99c] uppercase mb-4">
-            What We Offer
+            What I Offer
           </span>
           <h2 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl lg:text-6xl font-semibold text-[#3a3a3a] mb-6">
             Services Tailored for
@@ -73,7 +73,7 @@ export default function ServicesSection() {
             <span className="italic text-[#e3a99c]">Digital Nomads</span>
           </h2>
           <p className="font-[family-name:var(--font-body)] text-lg text-[#6b6b6b] max-w-2xl mx-auto">
-            From your first application to long-term residency, we&apos;re your
+            From your first application to long-term residency, I&apos;m your
             dedicated partner in building a location-independent life.
           </p>
         </div>

@@ -40,15 +40,15 @@ export default function HeroSection() {
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-[#e7ddd3] mb-8 animate-slide-up">
           <span className="w-2 h-2 rounded-full bg-[#e3a99c] animate-pulse" />
           <span className="font-[family-name:var(--font-body)] text-sm text-[#3a3a3a]">
-            Your Gateway to Global Remote Work
+            Hi, I&apos;m Abie — Your Visa Freedom Guide 👩🏻‍💻
           </span>
         </div>
 
         {/* Main Heading */}
-        <h1 className="font-[family-name:var(--font-heading)] text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-[#3a3a3a] leading-[1.1] mb-6 animate-slide-up delay-100">
-          Work From{" "}
+        <h1 className="font-[family-name:var(--font-heading)] text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-[#3a3a3a] leading-[1.1] mb-6 animate-slide-up delay-100">
+          From Weak Passport to{" "}
           <span className="relative inline-block">
-            <span className="relative z-10 text-[#e3a99c]">Anywhere</span>
+            <span className="relative z-10 text-[#e3a99c]">Global Freedom</span>
             <svg
               className="absolute -bottom-2 left-0 w-full h-3 text-[#f2d6c9]"
               viewBox="0 0 200 12"
@@ -63,15 +63,13 @@ export default function HeroSection() {
               />
             </svg>
           </span>
-          <br />
-          <span className="italic font-medium">Live Everywhere</span>
         </h1>
 
         {/* Subheading */}
         <p className="font-[family-name:var(--font-body)] text-lg md:text-xl text-[#6b6b6b] max-w-2xl mx-auto mb-10 leading-relaxed animate-slide-up delay-200">
-          Expert visa consulting for digital nomads. We navigate the
-          complexities of international work permits so you can focus on what
-          matters —
+          I turned my challenging passport into a clear, executable roadmap for
+          location independence. Now I help digital nomads like you navigate
+          visa complexities so you can focus on —
           <span className="text-[#3a3a3a] font-medium">
             {" "}
             living your adventure
@@ -109,12 +107,12 @@ export default function HeroSection() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto animate-slide-up delay-400">
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto animate-slide-up delay-400">
           {[
-            { number: "50+", label: "Countries Covered" },
-            { number: "2,500+", label: "Happy Nomads" },
-            { number: "98%", label: "Success Rate" },
-            { number: "24/7", label: "Support Available" },
+            { number: "30+", label: "Countries Navigated" },
+            { number: "200+", label: "Happy Nomads" },
+            { number: "95%", label: "Success Rate" },
+            { number: "5+", label: "Years Experience" },
           ].map((stat, index) => (
             <div
               key={index}
@@ -128,17 +126,17 @@ export default function HeroSection() {
               </p>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in delay-600">
+        {/* <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in delay-600">
           <span className="font-[family-name:var(--font-body)] text-xs text-[#6b6b6b] tracking-widest uppercase">
             Scroll to explore
           </span>
           <div className="w-6 h-10 rounded-full border-2 border-[#e3a99c]/50 flex justify-center pt-2">
             <div className="w-1.5 h-3 rounded-full bg-[#e3a99c] animate-bounce" />
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Floating Location Pins */}

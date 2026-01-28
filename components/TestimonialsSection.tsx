@@ -9,7 +9,7 @@ const testimonials = [
     role: "Product Designer",
     location: "From USA → Portugal",
     content:
-      "Happy Voyager made my dream of working from Lisbon a reality. Their team guided me through every step of the D7 visa process. Within 4 months, I was sipping coffee at a café in Alfama while attending my morning standup!",
+      "Abie made my dream of working from Lisbon a reality. She guided me through every step of the D7 visa process with such patience and expertise. Within 4 months, I was sipping coffee at a café in Alfama while attending my morning standup!",
     avatar: "SC",
     rating: 5,
     color: "#e3a99c",
@@ -19,7 +19,7 @@ const testimonials = [
     role: "Software Developer",
     location: "From UK → Spain",
     content:
-      "I was overwhelmed by the Spanish visa requirements until I found Happy Voyager. They not only handled my application flawlessly but also connected me with a local accountant for tax setup. Absolutely invaluable service.",
+      "I was overwhelmed by the Spanish visa requirements until I found Abie. She not only handled my application flawlessly but also connected me with a local accountant for tax setup. Her personal touch made all the difference.",
     avatar: "JM",
     rating: 5,
     color: "#bbcccd",
@@ -29,7 +29,7 @@ const testimonials = [
     role: "Content Creator",
     location: "From Japan → Thailand",
     content:
-      "The team&apos;s knowledge of Southeast Asian visa options is incredible. They helped me choose between different visa types and navigate the Thai LTR visa process. Now I&apos;m living my best life in Chiang Mai!",
+      "Abie's knowledge of Southeast Asian visa options is incredible. She helped me choose between different visa types and navigate the Thai LTR visa process. Her weak passport experience really resonated with me!",
     avatar: "YT",
     rating: 5,
     color: "#f2d6c9",
@@ -39,7 +39,7 @@ const testimonials = [
     role: "Freelance Writer",
     location: "From Germany → Croatia",
     content:
-      "As a freelancer, I needed specific advice on tax implications. Happy Voyager not only secured my Croatian digital nomad visa but also provided crucial guidance on maintaining compliance. Highly recommended!",
+      "As a freelancer, I needed specific advice on tax implications. Abie not only secured my Croatian digital nomad visa but also provided crucial guidance on maintaining compliance. Her playbooks are incredibly detailed!",
     avatar: "MW",
     rating: 5,
     color: "#e7ddd3",
@@ -47,9 +47,9 @@ const testimonials = [
   {
     name: "Priya Sharma",
     role: "UX Researcher",
-    location: "From India → Estonia",
+    location: "From India → Portugal",
     content:
-      "The e-Residency and digital nomad visa combination was complex, but Happy Voyager made it seamless. Their responsiveness and expertise gave me complete peace of mind throughout the process.",
+      "Having a weak passport myself, I instantly connected with Abie's story. She understood my challenges and created a clear roadmap for my Portugal visa. Her responsiveness and expertise gave me complete peace of mind.",
     avatar: "PS",
     rating: 5,
     color: "#e3a99c",
@@ -70,7 +70,10 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="section-padding relative overflow-hidden bg-[#3a3a3a]">
+    <section
+      id="testimonials"
+      className="section-padding relative overflow-hidden bg-[#3a3a3a]"
+    >
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
         <svg
@@ -106,8 +109,8 @@ export default function TestimonialsSection() {
             <span className="italic text-[#f2d6c9]">Voyagers</span>
           </h2>
           <p className="font-[family-name:var(--font-body)] text-lg text-white/60 max-w-2xl mx-auto">
-            Join thousands of digital nomads who&apos;ve successfully
-            transitioned to location-independent living with our help.
+            Join hundreds of digital nomads who&apos;ve successfully
+            transitioned to location-independent living with my help.
           </p>
         </div>
 

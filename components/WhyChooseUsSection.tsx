@@ -5,27 +5,27 @@ import { Award, Heart, Zap, MessageCircle } from "lucide-react";
 const reasons = [
   {
     icon: Award,
-    title: "Expert Knowledge",
+    title: "Lived Experience",
     description:
-      "Our team includes former immigration officers and visa specialists with decades of combined experience.",
+      "I&apos;ve personally navigated the weak passport struggle and built systems that work. This isn&apos;t theory—it&apos;s my life.",
   },
   {
     icon: Heart,
     title: "Personalized Approach",
     description:
-      "Every nomad is unique. We create custom strategies tailored to your specific situation and goals.",
+      "Every nomad is unique. I create custom strategies tailored to your specific situation and goals.",
   },
   {
     icon: Zap,
-    title: "Fast Processing",
+    title: "Clear Roadmaps",
     description:
-      "Our established relationships with embassies and efficient processes mean faster approvals.",
+      "No confusing bureaucracy. I provide executable playbooks that turn complex visa processes into simple steps.",
   },
   {
     icon: MessageCircle,
     title: "Ongoing Support",
     description:
-      "We don't disappear after approval. Get continued support throughout your nomad journey.",
+      "I don&apos;t disappear after approval. Get continued support throughout your nomad journey.",
   },
 ];
 
@@ -42,10 +42,10 @@ export default function WhyChooseUsSection() {
           {/* Left side - Content */}
           <div>
             <span className="inline-block font-[family-name:var(--font-body)] text-sm tracking-[0.2em] text-[#e3a99c] uppercase mb-4">
-              Why Happy Voyager
+              Why Work With Me
             </span>
             <h2 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl font-semibold text-[#3a3a3a] mb-6 leading-tight">
-              We Make the{" "}
+              I Make the{" "}
               <span className="relative inline-block">
                 <span className="relative z-10">Impossible</span>
                 <span className="absolute bottom-1 left-0 w-full h-3 bg-[#f2d6c9]/50 -z-0" />
@@ -54,9 +54,10 @@ export default function WhyChooseUsSection() {
               <span className="italic text-[#e3a99c]">Possible</span>
             </h2>
             <p className="font-[family-name:var(--font-body)] text-lg text-[#6b6b6b] mb-8 leading-relaxed">
-              Navigating international visa requirements can feel overwhelming.
-              That&apos;s why we&apos;ve built a team of passionate experts who
-              understand both the bureaucratic maze and the nomad dream.
+              As someone who turned a weak passport into global freedom, I
+              understand the frustration of navigating visa bureaucracy.
+              I&apos;ve documented my systems and playbooks to help you do the
+              same.
             </p>
 
             {/* Feature list */}
@@ -120,10 +121,10 @@ export default function WhyChooseUsSection() {
                   </div>
                   <div className="flex items-end gap-4">
                     <span className="font-[family-name:var(--font-heading)] text-5xl font-bold text-[#3a3a3a]">
-                      98%
+                      95%
                     </span>
                     <div className="flex-1 h-16 flex items-end gap-1">
-                      {[40, 55, 45, 70, 60, 80, 75, 90, 85, 95, 92, 98].map(
+                      {[40, 55, 45, 70, 60, 75, 70, 85, 80, 90, 88, 95].map(
                         (height, i) => (
                           <div
                             key={i}
@@ -141,20 +142,20 @@ export default function WhyChooseUsSection() {
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#bbcccd] to-[#e7ddd3] flex items-center justify-center">
                       <span className="font-[family-name:var(--font-heading)] text-sm font-semibold text-white">
-                        MR
+                        JT
                       </span>
                     </div>
                     <div>
                       <p className="font-[family-name:var(--font-heading)] text-sm font-semibold text-[#3a3a3a]">
-                        Maria Rodriguez
+                        James Thompson
                       </p>
                       <p className="font-[family-name:var(--font-body)] text-xs text-[#6b6b6b]">
-                        Software Engineer
+                        Remote Developer
                       </p>
                     </div>
                   </div>
                   <p className="font-[family-name:var(--font-body)] text-sm text-[#6b6b6b] italic">
-                    &quot;They made my Portugal visa process completely
+                    &quot;Abie made my Portugal visa process completely
                     stress-free. Now I&apos;m living my dream in Lisbon!&quot;
                   </p>
                   <div className="flex gap-1 mt-3">
