@@ -7,6 +7,7 @@ import {
   Users,
   Clock,
   Shield,
+  ArrowRight,
 } from "lucide-react";
 
 const services = [
@@ -15,149 +16,138 @@ const services = [
     title: "Visa Application Support",
     description:
       "Complete guidance through the visa application process, from document preparation to submission.",
-    color: "#e3a99c",
+    color: "#e3a99c", // Dusty Rose
   },
   {
     icon: Globe,
     title: "Country Selection Advisory",
     description:
       "Find your perfect destination based on visa requirements, cost of living, and lifestyle preferences.",
-    color: "#bbcccd",
+    color: "#bbcccd", // Sage
   },
   {
     icon: Briefcase,
     title: "Business Registration",
     description:
       "Help setting up legal entities, freelance structures, and tax-compliant business arrangements.",
-    color: "#f2d6c9",
+    color: "#e3a99c", // Dusty Rose
   },
   {
     icon: Users,
     title: "Family Visa Solutions",
     description:
       "Bring your loved ones along. I handle dependent visas and family reunion applications.",
-    color: "#e7ddd3",
+    color: "#f2d6c9", // Soft Peach
   },
   {
     icon: Clock,
     title: "Visa Extensions & Renewals",
     description:
       "Never worry about expiration. I track deadlines and handle all renewal paperwork.",
-    color: "#e3a99c",
+    color: "#f2d6c9", // Soft Peach
   },
   {
     icon: Shield,
     title: "Compliance & Tax Advisory",
     description:
       "Stay compliant with local regulations. Expert advice on tax obligations and legal requirements.",
-    color: "#bbcccd",
+    color: "#bbcccd", // Sage
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="section-padding relative overflow-hidden">
+    <section id="services" className="section-padding relative overflow-hidden bg-white">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#f2d6c9]/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#bbcccd]/20 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-[#f2d6c9]/30 rounded-full blur-[100px]" />
+        <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-[#bbcccd]/20 rounded-full blur-[100px]" />
+      </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block font-[family-name:var(--font-body)] text-sm tracking-[0.2em] text-[#e3a99c] uppercase mb-4">
-            What I Offer
-          </span>
-          <h2 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl lg:text-6xl font-semibold text-[#3a3a3a] mb-6">
-            Services Tailored for
-            <br />
-            <span className="italic text-[#e3a99c]">Digital Nomads</span>
+        <div className="text-center mb-16 md:mb-24">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f2d6c9]/20 border border-[#f2d6c9] mb-6">
+            <span className="text-xs font-bold tracking-widest text-[#d69586] uppercase">
+              What I Offer
+            </span>
+          </div>
+
+          <h2 className="font-[family-name:var(--font-heading)] text-5xl md:text-6xl font-bold text-[#3a3a3a] mb-6 leading-tight">
+            Services Tailored for <br />
+            <span className="font-script text-[#e3a99c] text-6xl md:text-7xl relative inline-block transform -rotate-2 mt-2">
+              Digital Nomads
+            </span>
           </h2>
-          <p className="font-[family-name:var(--font-body)] text-lg text-[#6b6b6b] max-w-2xl mx-auto">
+
+          <p className="font-[family-name:var(--font-body)] text-lg md:text-xl text-[#6b6b6b] max-w-2xl mx-auto leading-relaxed">
             From your first application to long-term residency, I&apos;m your
             dedicated partner in building a location-independent life.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-3xl bg-white border border-[#e7ddd3]/50 card-hover overflow-hidden"
+              className="group relative p-10 rounded-[2.5rem] bg-[#f9f5f2] hover:bg-white border border-transparent hover:border-[#e7ddd3] transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(227,169,156,0.15)] overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Decorative corner */}
               <div
-                className="absolute top-0 right-0 w-24 h-24 opacity-10 transition-opacity group-hover:opacity-20"
-                style={{
-                  background: `radial-gradient(circle at top right, ${service.color}, transparent 70%)`,
-                }}
+                className="absolute -top-10 -right-10 w-40 h-40 rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-500"
+                style={{ backgroundColor: service.color }}
               />
 
               {/* Icon */}
               <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 group-hover:rotate-3"
-                style={{ backgroundColor: `${service.color}20` }}
+                className="w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 bg-white group-hover:bg-[#f9f5f2] shadow-sm"
               >
                 <service.icon
-                  className="w-7 h-7"
+                  className="w-8 h-8 transition-colors duration-300"
                   style={{ color: service.color }}
                 />
               </div>
 
               {/* Content */}
-              <h3 className="font-[family-name:var(--font-heading)] text-xl font-semibold text-[#3a3a3a] mb-3">
+              <h3 className="font-[family-name:var(--font-heading)] text-2xl font-bold text-[#3a3a3a] mb-4 group-hover:text-[#d69586] transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="font-[family-name:var(--font-body)] text-[#6b6b6b] leading-relaxed">
+              <p className="font-[family-name:var(--font-body)] text-[#6b6b6b] leading-relaxed mb-8">
                 {service.description}
               </p>
 
               {/* Learn more link */}
-              <div className="mt-6 flex items-center gap-2 text-sm font-medium text-[#e3a99c] opacity-0 group-hover:opacity-100 transition-opacity">
-                <span>Learn more</span>
-                <svg
-                  className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
+              <div className="flex items-center gap-2 text-sm font-bold text-[#3a3a3a] group-hover:text-[#e3a99c] transition-colors duration-300 cursor-pointer">
+                <span className="uppercase tracking-wider">Learn more</span>
+                <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center group-hover:bg-[#e3a99c] group-hover:text-white transition-all duration-300">
+                  <ArrowRight className="w-4 h-4 transform group-hover:-rotate-45 transition-transform duration-300" />
+                </div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <p className="font-[family-name:var(--font-body)] text-[#6b6b6b] mb-6">
-            Not sure which service you need?
-          </p>
-          <a
-            href="#contact"
-            className="btn-secondary inline-flex items-center gap-2"
-          >
-            <span>Get a Free Assessment</span>
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        <div className="mt-20 text-center">
+          <div className="inline-flex flex-col items-center p-8 xs:p-12 rounded-[3rem] bg-[#3a3a3a] text-white relative overflow-hidden group">
+            {/* Background blobs for CTA */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#e3a99c] rounded-full blur-[80px] opacity-20 group-hover:opacity-30 transition-opacity duration-500" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#bbcccd] rounded-full blur-[80px] opacity-20 group-hover:opacity-30 transition-opacity duration-500" />
+
+            <h3 className="text-2xl md:text-3xl font-[family-name:var(--font-heading)] font-bold mb-6 relative z-10">
+              Not sure which path is right for you?
+            </h3>
+
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-[#3a3a3a] font-bold text-lg hover:bg-[#e3a99c] hover:text-white transition-all duration-300 shadow-lg hover:shadow-[#e3a99c]/50 transform hover:-translate-y-1 relative z-10"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-              />
-            </svg>
-          </a>
+              <span>Get a Personal Assessment</span>
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          </div>
         </div>
       </div>
     </section>

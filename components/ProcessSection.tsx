@@ -5,7 +5,7 @@ import {
   FileText,
   Send,
   CheckCircle,
-  Plane,
+  ArrowRight,
 } from "lucide-react";
 
 const steps = [
@@ -14,32 +14,32 @@ const steps = [
     icon: MessageSquare,
     title: "Free Consultation",
     description:
-      "Schedule a call to discuss your goals andtimeline. I'll assess your eligibility and recommend the best visa options.",
+      "Schedule a call to discuss your goals. I'll assess your eligibility and recommend the best visa options.",
     color: "#e3a99c",
   },
   {
     number: "02",
     icon: FileText,
-    title: "Document Preparation",
+    title: "Document Prep",
     description:
-      "I provide a personalized checklist and guide you through gathering all required documents. Everything gets reviewed for accuracy.",
+      "I provide a personalized checklist and guide you through gathering documents. Everything gets reviewed for accuracy.",
     color: "#bbcccd",
   },
   {
     number: "03",
     icon: Send,
-    title: "Application Submission",
+    title: "Application",
     description:
-      "I handle the entire submission process, communicate with embassies on your behalf, and keep you updated on progress.",
+      "I handle the submission process, communicate with embassies, and keep you updated on progress.",
     color: "#f2d6c9",
   },
   {
     number: "04",
     icon: CheckCircle,
-    title: "Approval & Beyond",
+    title: "Approval",
     description:
-      "Celebrate your approval! I continue to support you with arrival procedures, local registration, and ongoing compliance.",
-    color: "#e7ddd3",
+      "Celebrate your approval! I continue to support you with arrival procedures and local registration.",
+    color: "#e3a99c",
   },
 ];
 
@@ -47,115 +47,97 @@ export default function ProcessSection() {
   return (
     <section
       id="process"
-      className="section-padding relative overflow-hidden bg-gradient-to-b from-white to-[#f9f5f2]"
+      className="section-padding relative overflow-hidden bg-white"
     >
       {/* Decorative background elements */}
-      <div className="absolute top-40 left-10 w-64 h-64 bg-[#f2d6c9]/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#bbcccd]/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none">
+        <div className="absolute top-[20%] left-[10%] w-64 h-64 bg-[#f2d6c9]/20 rounded-full blur-[80px]" />
+        <div className="absolute bottom-[20%] right-[10%] w-80 h-80 bg-[#bbcccd]/15 rounded-full blur-[80px]" />
+      </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <span className="inline-block font-[family-name:var(--font-body)] text-sm tracking-[0.2em] text-[#e3a99c] uppercase mb-4">
-            How It Works
-          </span>
-          <h2 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl lg:text-6xl font-semibold text-[#3a3a3a] mb-6">
-            Your Journey to
-            <br />
-            <span className="italic text-[#e3a99c]">Freedom</span> in 4 Steps
+        <div className="text-center mb-20 md:mb-32">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#bbcccd]/20 border border-[#bbcccd] mb-6">
+            <span className="text-xs font-bold tracking-widest text-[#7a8f90] uppercase">
+              How It Works
+            </span>
+          </div>
+
+          <h2 className="font-[family-name:var(--font-heading)] text-5xl md:text-6xl font-bold text-[#3a3a3a] mb-6 leading-tight">
+            Your Journey to <br />
+            <span className="font-script text-[#e3a99c] text-6xl md:text-7xl relative inline-block transform -rotate-2 mt-2">
+              Freedom
+            </span>
+            <span className="text-[#3a3a3a]"> in 4 Steps</span>
           </h2>
-          <p className="font-[family-name:var(--font-body)] text-lg text-[#6b6b6b] max-w-2xl mx-auto">
+
+          <p className="font-[family-name:var(--font-body)] text-lg text-[#6b6b6b] max-w-2xl mx-auto leading-relaxed">
             I&apos;ve simplified the complex visa process into a clear,
-            stress-free journey. Here&apos;s what to expect.
+            stress-free roadmap. Here&apos;s what to expect.
           </p>
         </div>
 
         {/* Process Steps */}
         <div className="relative">
           {/* Connecting line - desktop */}
-          <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-[#e3a99c] via-[#bbcccd] to-[#f2d6c9]" />
+          <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-[#e7ddd3]" />
 
           {/* Steps grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="relative group"
+                className="relative group text-center lg:text-left pt-8 lg:pt-0"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                {/* Step card */}
-                <div className="relative p-8 rounded-3xl bg-white border border-[#e7ddd3]/50 shadow-sm hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2">
-                  {/* Number badge */}
-                  <div
-                    className="absolute -top-4 left-8 w-16 h-8 rounded-full flex items-center justify-center text-white font-[family-name:var(--font-heading)] text-sm font-semibold shadow-lg"
-                    style={{
-                      background: `linear-gradient(135deg, ${step.color} 0%, ${step.color}dd 100%)`,
-                    }}
-                  >
-                    {step.number}
-                  </div>
-
-                  {/* Icon */}
-                  <div
-                    className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mt-4 transition-transform group-hover:scale-110 group-hover:rotate-3"
-                    style={{ backgroundColor: `${step.color}20` }}
-                  >
-                    <step.icon
-                      className="w-8 h-8"
-                      style={{ color: step.color }}
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="font-[family-name:var(--font-heading)] text-xl font-semibold text-[#3a3a3a] mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="font-[family-name:var(--font-body)] text-[#6b6b6b] leading-relaxed text-sm">
-                    {step.description}
-                  </p>
-
-                </div>
-
-                {/* Decorative dot on timeline - desktop */}
-                <div
-                  className="hidden lg:block absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white shadow-md"
+                {/* Number badge / Dot */}
+                <div className="absolute top-0 left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 -translate-y-1/2 w-4 h-4 rounded-full border-4 border-white shadow-sm z-20"
                   style={{ backgroundColor: step.color }}
                 />
+
+                {/* Mobile line connection */}
+                <div className="lg:hidden absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-0.5 bg-[#e7ddd3] -z-10 last:hidden" />
+
+                {/* Card Content */}
+                <div className="relative p-8 rounded-[2rem] bg-[#f9f5f2] hover:bg-white border border-transparent hover:border-[#e7ddd3] transition-all duration-300 hover:shadow-xl group-hover:-translate-y-2">
+
+                  <div
+                    className="inline-flex w-16 h-16 rounded-2xl items-center justify-center mb-6 shadow-sm bg-white"
+                  >
+                    <step.icon className="w-8 h-8" style={{ color: step.color }} />
+                  </div>
+
+                  <div className="mb-4">
+                    <span className="block font-[family-name:var(--font-heading)] text-5xl font-bold text-[#e7ddd3]/60 mb-2">
+                      {step.number}
+                    </span>
+                    <h3 className="font-[family-name:var(--font-heading)] text-2xl font-bold text-[#3a3a3a]">
+                      {step.title}
+                    </h3>
+                  </div>
+
+                  <p className="font-[family-name:var(--font-body)] text-[#6b6b6b] leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Bottom visual */}
-        <div className="mt-20 relative">
-          <div className="bg-gradient-to-r from-[#f2d6c9] via-[#e7ddd3] to-[#bbcccd] rounded-3xl p-8 md:p-12 overflow-hidden">
-
-
-            <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="font-[family-name:var(--font-heading)] text-2xl md:text-3xl font-semibold text-[#3a3a3a] mb-3">
-                  Ready to Start Your Nomad Journey?
-                </h3>
-                <p className="font-[family-name:var(--font-body)] text-[#6b6b6b] max-w-xl">
-                  Book your free consultation today and take the first step
-                  towards location independence.
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row items-center gap-4">
-                <a
-                  href="#contact"
-                  className="btn-primary inline-flex items-center gap-2 whitespace-nowrap"
-                >
-                  <span>Book Free Call</span>
-                  <Plane className="w-4 h-4 transform -rotate-45" />
-                </a>
-                <span className="font-[family-name:var(--font-body)] text-sm text-[#6b6b6b]">
-                  30-min consultation
-                </span>
-              </div>
-            </div>
-          </div>
+        {/* Bottom CTA */}
+        <div className="mt-24 text-center">
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#3a3a3a] text-white font-bold text-lg hover:bg-[#e3a99c] transition-all duration-300 shadow-xl hover:shadow-[#e3a99c]/40 transform hover:-translate-y-1"
+          >
+            <span>Book Your Free Consultation</span>
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <p className="mt-4 text-sm text-[#6b6b6b]">
+            No commitment required. Let&apos;s just chat about your options.
+          </p>
         </div>
       </div>
     </section>

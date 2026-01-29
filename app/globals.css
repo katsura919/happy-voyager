@@ -43,6 +43,7 @@
   --radius: 0.625rem;
   --font-heading: "Avenir", "Avenir Next", system-ui, sans-serif;
   --font-body: "Avenir", "Avenir Next", system-ui, sans-serif;
+  --font-script: var(--font-script);
 
   --background: #f9f5f2;
   --foreground: #3a3a3a;
@@ -428,6 +429,10 @@ body {
   height: 3px;
   background: linear-gradient(90deg, #e3a99c, #f2d6c9, #bbcccd);
   border-radius: 2px;
+}
+
+.font-script {
+  font-family: var(--font-script), cursive;
 }
 
 /* Card hover effect */

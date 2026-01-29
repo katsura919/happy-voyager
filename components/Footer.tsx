@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import {
-  Plane,
   Instagram,
   Twitter,
   Linkedin,
   Youtube,
   Mail,
   MapPin,
+  ArrowRight,
 } from "lucide-react";
 
 const footerLinks = {
@@ -17,27 +17,18 @@ const footerLinks = {
     { name: "Country Selection", href: "#destinations" },
     { name: "Business Setup", href: "#services" },
     { name: "Tax Advisory", href: "#services" },
-    { name: "Family Visas", href: "#services" },
   ],
   destinations: [
     { name: "Portugal", href: "#destinations" },
     { name: "Spain", href: "#destinations" },
     { name: "Croatia", href: "#destinations" },
     { name: "Thailand", href: "#destinations" },
-    { name: "All Destinations", href: "#destinations" },
   ],
-  resources: [
+  company: [
     { name: "About Abie", href: "#" },
     { name: "Success Stories", href: "#" },
-    { name: "Visa Guides", href: "#" },
-    { name: "FAQ", href: "#faq" },
     { name: "Blog", href: "#" },
-  ],
-  legal: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Cookie Policy", href: "#" },
-    { name: "Refund Policy", href: "#" },
+    { name: "Contact", href: "#contact" },
   ],
 };
 
@@ -50,200 +41,114 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#3a3a3a] text-white overflow-hidden">
+    <footer className="relative bg-[#3a3a3a] text-white overflow-hidden pt-20 pb-12">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
-
-      {/* Decorative top border */}
-      <div className="h-1 bg-gradient-to-r from-[#e3a99c] via-[#f2d6c9] to-[#bbcccd]" />
-
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 relative z-10">
-        {/* Main footer content */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-12">
-          {/* Brand column */}
-          <div className="col-span-2 md:col-span-3 lg:col-span-2">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 mb-6 group">
-              <div className="relative">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#e3a99c] to-[#f2d6c9] flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                  <Plane className="w-5 h-5 text-white transform -rotate-45" />
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-[family-name:var(--font-heading)] text-xl font-semibold text-white tracking-tight">
-                  Happy Voyager
-                </span>
-                <span className="text-[10px] tracking-[0.2em] text-[#e3a99c] uppercase font-medium -mt-1">
-                  Visa Consulting
-                </span>
-              </div>
+        {/* Top Split */}
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 mb-20">
+          {/* Brand */}
+          <div>
+            <Link href="/" className="inline-block mb-8">
+              <h2 className="text-3xl font-bold tracking-tight text-white mb-2">Happy Voyager</h2>
+              <p className="text-[#e3a99c] text-sm font-bold tracking-[0.2em] uppercase">Digital Nomad Consultant</p>
             </Link>
-
-            <p className="font-[family-name:var(--font-body)] text-white/60 text-sm leading-relaxed mb-6 max-w-xs">
-              Hi, I&apos;m Abie! I help digital nomads turn their weak passports
-              into global freedom through clear, executable visa roadmaps.
+            <p className="text-white/60 text-lg leading-relaxed max-w-md mb-8">
+              I help digital nomads turn their weak passports into global freedom through
+              clear, executable visa roadmaps. Let's design your new life.
             </p>
 
-            {/* Contact info */}
-            <div className="space-y-3">
-              <a
-                href="mailto:abie@happyvoyager.com"
-                className="flex items-center gap-3 text-white/60 hover:text-[#e3a99c] transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span className="font-[family-name:var(--font-body)] text-sm">
-                  abie@happyvoyager.com
-                </span>
-              </a>
-              <div className="flex items-center gap-3 text-white/60">
-                <MapPin className="w-4 h-4" />
-                <span className="font-[family-name:var(--font-body)] text-sm">
-                  Remote-first, Worldwide
-                </span>
-              </div>
-            </div>
-
-            {/* Social links */}
-            <div className="flex gap-3 mt-6">
+            <div className="flex gap-4">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#e3a99c] transition-colors group"
+                  className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#e3a99c] hover:border-[#e3a99c] hover:text-[#3a3a3a] transition-all duration-300"
                 >
-                  <social.icon className="w-5 h-5 text-white/60 group-hover:text-white transition-colors" />
+                  <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-white mb-4">
-              Services
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.services.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.href}
-                    className="font-[family-name:var(--font-body)] text-sm text-white/60 hover:text-[#e3a99c] transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Newsletter */}
+          <div className="lg:pt-4">
+            <h3 className="text-2xl font-bold mb-4">Join the Newsletter</h3>
+            <p className="text-white/60 mb-8">Get weekly visa updates, nomad tips, and exclusive guides delivered to your inbox.</p>
 
-          {/* Destinations */}
-          <div>
-            <h4 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-white mb-4">
-              Destinations
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.destinations.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.href}
-                    className="font-[family-name:var(--font-body)] text-sm text-white/60 hover:text-[#e3a99c] transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-white mb-4">
-              Resources
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.href}
-                    className="font-[family-name:var(--font-body)] text-sm text-white/60 hover:text-[#e3a99c] transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h4 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-white mb-4">
-              Legal
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.href}
-                    className="font-[family-name:var(--font-body)] text-sm text-white/60 hover:text-[#e3a99c] transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Newsletter */}
-        <div className="mt-16 pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-center md:text-left">
-              <h4 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-white mb-2">
-                Get Nomad Tips & Visa Updates
-              </h4>
-              <p className="font-[family-name:var(--font-body)] text-sm text-white/60">
-                Weekly insights delivered to your inbox. No spam, unsubscribe
-                anytime.
-              </p>
-            </div>
-            <div className="flex gap-3 w-full md:w-auto">
+            <div className="flex gap-2">
               <input
                 type="email"
-                placeholder="Enter your email"
-                className="flex-1 md:w-64 px-5 py-3 rounded-full bg-white/10 border border-white/20 font-[family-name:var(--font-body)] text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#e3a99c] transition-colors"
+                placeholder="Enter your email address"
+                className="flex-1 bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white placeholder:text-white/30 focus:outline-none focus:border-[#e3a99c] transition-colors"
               />
-              <button className="px-6 py-3 rounded-full bg-gradient-to-r from-[#e3a99c] to-[#d69586] text-white font-[family-name:var(--font-body)] font-medium text-sm hover:shadow-lg transition-all">
-                Subscribe
+              <button className="px-8 py-4 bg-[#e3a99c] rounded-xl text-[#3a3a3a] font-bold hover:bg-white transition-colors">
+                Join
               </button>
             </div>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-[family-name:var(--font-body)] text-sm text-white/40 text-center md:text-left">
-            © {new Date().getFullYear()} Happy Voyager. All rights reserved.
-          </p>
-          <div className="flex items-center gap-2 text-white/40">
-            <span className="font-[family-name:var(--font-body)] text-sm">
-              Made with
-            </span>
-            <svg
-              className="w-4 h-4 text-[#e3a99c]"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <span className="font-[family-name:var(--font-body)] text-sm">
-              for nomads everywhere
-            </span>
+        {/* Divider */}
+        <div className="h-px bg-white/10 mb-16" />
+
+        {/* Links Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
+          <div>
+            <h4 className="font-bold text-white mb-6">Services</h4>
+            <ul className="space-y-4">
+              {footerLinks.services.map((link, i) => (
+                <li key={i}>
+                  <a href={link.href} className="text-white/60 hover:text-[#e3a99c] transition-colors">{link.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-bold text-white mb-6">Destinations</h4>
+            <ul className="space-y-4">
+              {footerLinks.destinations.map((link, i) => (
+                <li key={i}>
+                  <a href={link.href} className="text-white/60 hover:text-[#e3a99c] transition-colors">{link.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-bold text-white mb-6">Company</h4>
+            <ul className="space-y-4">
+              {footerLinks.company.map((link, i) => (
+                <li key={i}>
+                  <a href={link.href} className="text-white/60 hover:text-[#e3a99c] transition-colors">{link.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-bold text-white mb-6">Contact</h4>
+            <ul className="space-y-4">
+              <li>
+                <a href="mailto:abie@happyvoyager.com" className="flex items-center gap-2 text-white/60 hover:text-[#e3a99c] transition-colors">
+                  <Mail className="w-4 h-4" />
+                  <span>abie@happyvoyager.com</span>
+                </a>
+              </li>
+              <li className="flex items-center gap-2 text-white/60">
+                <MapPin className="w-4 h-4" />
+                <span>Remote-first, Worldwide</span>
+              </li>
+            </ul>
           </div>
         </div>
+
+        {/* Bottom */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-white/5 text-sm text-white/40">
+          <p>© {new Date().getFullYear()} Abie Maxey. All rights reserved.</p>
+          <div className="flex gap-8">
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          </div>
+        </div>
+
       </div>
     </footer>
   );

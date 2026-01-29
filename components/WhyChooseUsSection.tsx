@@ -1,6 +1,6 @@
 "use client";
 
-import { Award, Heart, Zap, MessageCircle } from "lucide-react";
+import { Award, Heart, Zap, MessageCircle, CheckCircle2 } from "lucide-react";
 
 const reasons = [
   {
@@ -8,52 +8,60 @@ const reasons = [
     title: "Lived Experience",
     description:
       "I&apos;ve personally navigated the weak passport struggle and built systems that work. This isn&apos;t theory—it&apos;s my life.",
+    color: "#e3a99c",
   },
   {
     icon: Heart,
     title: "Personalized Approach",
     description:
       "Every nomad is unique. I create custom strategies tailored to your specific situation and goals.",
+    color: "#bbcccd",
   },
   {
     icon: Zap,
     title: "Clear Roadmaps",
     description:
       "No confusing bureaucracy. I provide executable playbooks that turn complex visa processes into simple steps.",
+    color: "#f2d6c9",
   },
   {
     icon: MessageCircle,
     title: "Ongoing Support",
     description:
       "I don&apos;t disappear after approval. Get continued support throughout your nomad journey.",
+    color: "#e3a99c",
   },
 ];
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="section-padding relative overflow-hidden bg-gradient-to-b from-[#f9f5f2] to-[#e7ddd3]/30">
+    <section className="section-padding relative overflow-hidden bg-[#f9f5f2]">
       {/* Decorative elements */}
-      <div className="absolute top-20 left-1/4 w-2 h-2 rounded-full bg-[#e3a99c]" />
-      <div className="absolute top-40 right-1/3 w-3 h-3 rounded-full bg-[#bbcccd]" />
-      <div className="absolute bottom-32 left-1/3 w-2 h-2 rounded-full bg-[#f2d6c9]" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white rounded-full blur-[120px] opacity-60 translate-x-1/3 -translate-y-1/4 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#e3a99c]/10 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/4 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left side - Content */}
           <div>
-            <span className="inline-block font-[family-name:var(--font-body)] text-sm tracking-[0.2em] text-[#e3a99c] uppercase mb-4">
-              Why Work With Me
-            </span>
-            <h2 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl font-semibold text-[#3a3a3a] mb-6 leading-tight">
-              I Make the{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10">Impossible</span>
-                <span className="absolute bottom-1 left-0 w-full h-3 bg-[#f2d6c9]/50 -z-0" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#bbcccd]/20 border border-[#bbcccd] mb-6">
+              <span className="text-xs font-bold tracking-widest text-[#7a8f90] uppercase">
+                Why Work With Me
               </span>
-              <br />
-              <span className="italic text-[#e3a99c]">Possible</span>
+            </div>
+
+            <h2 className="font-[family-name:var(--font-heading)] text-5xl md:text-6xl font-bold text-[#3a3a3a] mb-8 leading-tight">
+              I Make the <br />
+              <span className="relative inline-block z-10">
+                Impossible
+                <span className="absolute bottom-2 left-0 w-full h-4 bg-[#e3a99c]/30 -z-10 transform -rotate-2" />
+              </span>{" "}
+              <span className="font-script text-[#e3a99c] text-6xl md:text-7xl relative inline-block transform -rotate-3 ml-2">
+                Possible
+              </span>
             </h2>
-            <p className="font-[family-name:var(--font-body)] text-lg text-[#6b6b6b] mb-8 leading-relaxed">
+
+            <p className="font-[family-name:var(--font-body)] text-lg text-[#6b6b6b] mb-10 leading-relaxed max-w-lg">
               As someone who turned a weak passport into global freedom, I
               understand the frustration of navigating visa bureaucracy.
               I&apos;ve documented my systems and playbooks to help you do the
@@ -61,17 +69,25 @@ export default function WhyChooseUsSection() {
             </p>
 
             {/* Feature list */}
-            <div className="space-y-6">
+            <div className="grid gap-8">
               {reasons.map((reason, index) => (
-                <div key={index} className="flex gap-4 group">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center group-hover:shadow-md group-hover:-translate-y-1 transition-all duration-300">
-                    <reason.icon className="w-6 h-6 text-[#e3a99c]" />
+                <div
+                  key={index}
+                  className="flex gap-6 group p-4 rounded-2xl hover:bg-white/50 transition-colors duration-300"
+                >
+                  <div
+                    className="flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-sm bg-white"
+                  >
+                    <reason.icon
+                      className="w-7 h-7"
+                      style={{ color: reason.color }}
+                    />
                   </div>
                   <div>
-                    <h3 className="font-[family-name:var(--font-heading)] text-lg font-semibold text-[#3a3a3a] mb-1">
+                    <h3 className="font-[family-name:var(--font-heading)] text-xl font-bold text-[#3a3a3a] mb-2 group-hover:text-[#e3a99c] transition-colors">
                       {reason.title}
                     </h3>
-                    <p className="font-[family-name:var(--font-body)] text-[#6b6b6b] text-sm leading-relaxed">
+                    <p className="font-[family-name:var(--font-body)] text-[#6b6b6b] leading-relaxed">
                       {reason.description}
                     </p>
                   </div>
@@ -81,109 +97,91 @@ export default function WhyChooseUsSection() {
           </div>
 
           {/* Right side - Visual */}
-          <div className="relative">
-            {/* Main image placeholder with decorative frame */}
-            <div className="relative">
-              {/* Background shapes */}
-              <div className="absolute -top-8 -left-8 w-full h-full rounded-3xl bg-[#e3a99c]/10 transform rotate-3" />
-              <div className="absolute -top-4 -left-4 w-full h-full rounded-3xl bg-[#bbcccd]/20 transform rotate-1" />
+          <div className="relative lg:h-[700px] flex items-center justify-center">
+            {/* Abstract Composition */}
+            <div className="relative w-full max-w-md aspect-[4/5]">
+              {/* Main Card Background */}
+              <div className="absolute inset-0 bg-white rounded-[3rem] shadow-2xl overflow-hidden transform rotate-3 border border-[#e7ddd3]">
+                {/* Pastel Gradient Mesh */}
+                <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-[#f9f5f2] via-[#fff] to-[#e7ddd3]/30" />
+                <div className="absolute top-[-20%] right-[-20%] w-[80%] h-[80%] bg-[#e3a99c]/10 rounded-full blur-[60px]" />
+                <div className="absolute bottom-[-10%] left-[-10%] w-[60%] h-[60%] bg-[#bbcccd]/20 rounded-full blur-[50px]" />
 
-              {/* Main content box */}
-              <div className="relative rounded-3xl bg-gradient-to-br from-[#f2d6c9] to-[#e7ddd3] p-8 lg:p-12 overflow-hidden">
-                {/* Pattern overlay */}
-                <div className="absolute inset-0 opacity-10">
-                  <svg
-                    className="w-full h-full"
-                    viewBox="0 0 100 100"
-                    preserveAspectRatio="none"
-                  >
-                    <pattern
-                      id="grid"
-                      width="10"
-                      height="10"
-                      patternUnits="userSpaceOnUse"
-                    >
-                      <circle cx="5" cy="5" r="1" fill="currentColor" />
-                    </pattern>
-                    <rect width="100" height="100" fill="url(#grid)" />
-                  </svg>
-                </div>
+                {/* Grid Pattern */}
+                <div className="absolute inset-0 opacity-[0.03]"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%233a3a3a' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3C/g%3E%3C/svg%3E")`
+                  }}
+                />
+              </div>
 
-                {/* Stats card */}
-                <div className="relative bg-white rounded-2xl p-6 shadow-xl mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="font-[family-name:var(--font-body)] text-sm text-[#6b6b6b]">
-                      Success Rate
-                    </span>
-                    <span className="text-xs text-[#e3a99c] bg-[#e3a99c]/10 px-2 py-1 rounded-full">
-                      +12% this year
-                    </span>
+              {/* Floating Element 1: Success Rate */}
+              <div className="absolute top-12 -left-8 bg-white/90 backdrop-blur-md p-6 rounded-[2rem] shadow-xl border border-white/50 animate-float w-64">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <p className="text-sm text-[#6b6b6b] font-medium mb-1">Approval Rate</p>
+                    <h4 className="text-4xl font-bold text-[#3a3a3a]">98%</h4>
                   </div>
-                  <div className="flex items-end gap-4">
-                    <span className="font-[family-name:var(--font-heading)] text-5xl font-bold text-[#3a3a3a]">
-                      95%
-                    </span>
-                    <div className="flex-1 h-16 flex items-end gap-1">
-                      {[40, 55, 45, 70, 60, 75, 70, 85, 80, 90, 88, 95].map(
-                        (height, i) => (
-                          <div
-                            key={i}
-                            className="flex-1 rounded-t-sm bg-gradient-to-t from-[#e3a99c] to-[#f2d6c9]"
-                            style={{ height: `${height}%` }}
-                          />
-                        ),
-                      )}
-                    </div>
+                  <div className="bg-[#e3a99c]/10 p-2 rounded-full">
+                    <CheckCircle2 className="w-6 h-6 text-[#e3a99c]" />
                   </div>
                 </div>
+                {/* Mini Chart */}
+                <div className="flex items-end gap-1 h-12">
+                  {[40, 65, 50, 80, 70, 90, 85, 100].map((h, i) => (
+                    <div
+                      key={i}
+                      className="flex-1 rounded-t-sm"
+                      style={{
+                        height: `${h}%`,
+                        background: i === 7 ? '#e3a99c' : '#e7ddd3'
+                      }}
+                    />
+                  ))}
+                </div>
+              </div>
 
-                {/* Testimonial snippet */}
-                <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#bbcccd] to-[#e7ddd3] flex items-center justify-center">
-                      <span className="font-[family-name:var(--font-heading)] text-sm font-semibold text-white">
-                        JT
-                      </span>
-                    </div>
-                    <div>
-                      <p className="font-[family-name:var(--font-heading)] text-sm font-semibold text-[#3a3a3a]">
-                        James Thompson
-                      </p>
-                      <p className="font-[family-name:var(--font-body)] text-xs text-[#6b6b6b]">
-                        Remote Developer
-                      </p>
-                    </div>
+              {/* Floating Element 2: Image Card */}
+              <div className="absolute top-1/3 right-[-2rem] w-64 h-80 bg-white p-3 rounded-[2rem] shadow-2xl border border-white transform -rotate-6 transition-transform hover:rotate-0 duration-500 z-10">
+                <div className="w-full h-full rounded-[1.5rem] overflow-hidden relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=800&q=80"
+                    alt="Venice Pastel"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <p className="text-xs font-medium uppercase tracking-wider mb-1">Italy</p>
+                    <p className="font-script text-3xl">La Dolce Vita</p>
                   </div>
-                  <p className="font-[family-name:var(--font-body)] text-sm text-[#6b6b6b] italic">
-                    &quot;Abie made my Portugal visa process completely
-                    stress-free. Now I&apos;m living my dream in Lisbon!&quot;
-                  </p>
-                  <div className="flex gap-1 mt-3">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <svg
-                        key={star}
-                        className="w-4 h-4 text-[#e3a99c]"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
+                </div>
+              </div>
+
+              {/* Floating Element 3: Testimonial */}
+              <div className="absolute -bottom-8 left-8 right-8 bg-white/95 backdrop-blur-xl p-6 rounded-[2rem] shadow-xl border border-[#e7ddd3] animate-float-delayed z-20">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-md">
+                    <img
+                      src="https://randomuser.me/api/portraits/women/44.jpg"
+                      alt="Client"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-[#3a3a3a] text-sm">Sarah Jenkins</p>
+                    <p className="text-xs text-[#e3a99c] font-medium">Freelance Designer</p>
+                  </div>
+                  <div className="ml-auto flex gap-0.5">
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#e3a99c]" />
                     ))}
                   </div>
                 </div>
-
-                {/* Floating badge */}
-                <div className="absolute -bottom-4 -right-4 bg-white rounded-full p-4 shadow-lg">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#e3a99c] to-[#f2d6c9] flex items-center justify-center">
-                    <span className="font-[family-name:var(--font-heading)] text-lg font-bold text-white">
-                      5+
-                    </span>
-                  </div>
-                  <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-[#6b6b6b] whitespace-nowrap">
-                    Years Experience
-                  </span>
-                </div>
+                <p className="text-sm text-[#6b6b6b] italic leading-relaxed">
+                  &quot;Finally got my D7 visa approved! Abie made the impossible paperwork feel like a breeze.&quot;
+                </p>
               </div>
+
             </div>
           </div>
         </div>
@@ -191,3 +189,4 @@ export default function WhyChooseUsSection() {
     </section>
   );
 }
+
