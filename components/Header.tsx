@@ -5,11 +5,12 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Services", href: "#services" },
-  { name: "Destinations", href: "#destinations" },
-  { name: "Process", href: "#process" },
+  { name: "Services", href: "/#services" },
+  { name: "Destinations", href: "/#destinations" },
+  { name: "Process", href: "/#process" },
   { name: "Blogs", href: "/blog" },
-  { name: "About", href: "#about" },
+  { name: "About", href: "/#about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -27,8 +28,8 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 font-[family-name:var(--font-body)] ${isScrolled
-          ? "bg-[#f9f5f2]/95 backdrop-blur-md shadow-sm py-4"
-          : "bg-transparent py-6"
+        ? "bg-[#f9f5f2]/95 backdrop-blur-md shadow-sm py-4"
+        : "bg-transparent py-6"
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -54,7 +55,7 @@ export default function Header() {
             ))}
 
             <Link
-              href="#contact"
+              href="/contact"
               className="px-6 py-2.5 rounded-full bg-[#3a3a3a] text-white text-sm font-semibold hover:bg-[#e3a99c] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
               Let&apos;s Talk
@@ -92,7 +93,7 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
               className="mt-2 px-8 py-3 rounded-full bg-[#3a3a3a] text-white font-semibold hover:bg-[#e3a99c] transition-colors w-full text-center"
             >

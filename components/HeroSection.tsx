@@ -25,27 +25,13 @@ export default function HeroSection() {
       ref={containerRef}
       className="relative min-h-screen flex items-center overflow-hidden bg-[#f9f5f2] pt-20"
     >
-      {/* Dynamic Background Map Path */}
-      <svg
-        className="absolute inset-0 w-full h-full pointer-events-none opacity-40 mix-blend-multiply"
-        viewBox="0 0 1440 900"
-        fill="none"
-        preserveAspectRatio="xMidYMid slice"
-      >
-        <path
-          d="M-100 800 C 200 800, 400 600, 600 700 S 900 300, 1200 400 S 1500 100, 1600 100"
-          stroke="#e3a99c"
-          strokeWidth="3"
-          className="animate-draw-path"
-        />
-        <path
-          d="M-100 850 C 250 850, 450 650, 650 750 S 950 350, 1250 450 S 1550 150, 1650 150"
-          stroke="#bbcccd"
-          strokeWidth="2"
-          className="animate-draw-path delay-300"
-          style={{ animationDelay: "0.5s" }}
-        />
-      </svg>
+      {/* Background Pattern */}
+      <div className="absolute inset-0 z-0 opacity-30 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(#e3a99c 1.5px, transparent 1.5px)',
+          backgroundSize: '24px 24px'
+        }}
+      />
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
@@ -57,13 +43,10 @@ export default function HeroSection() {
             </span>
           </div>
 
-          <h1 className="font-[family-name:var(--font-heading)] text-6xl lg:text-8xl font-bold text-[#3a3a3a] leading-[0.95] tracking-tight mb-6 animate-slide-up relative">
+          <h1 className="font-[family-name:var(--font-heading)] text-6xl lg:text-8xl font-bold text-[#3a3a3a] leading-[0.95] tracking-tight mb-6 animate-slide-up relative z-10">
             Design Your <br />
-            <span className="relative">
+            <span className="relative inline-block text-[#e3a99c]">
               Freedom
-              <span className="absolute -bottom-2 right-0 font-script text-6xl text-[#e3a99c] transform -rotate-12 translate-x-12 translate-y-4 opacity-90">
-                Lifestyle
-              </span>
             </span>
           </h1>
 
