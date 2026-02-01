@@ -114,11 +114,6 @@ export default function CommentSection({ slug }: CommentSectionProps) {
         comment: newComment,
       });
 
-      // Show success message - comment needs approval
-      setSuccessMessage(
-        response.message ||
-          "Thank you! Your comment has been submitted and is pending approval.",
-      );
       setNewComment("");
 
       // Note: We don't add to comments list since it needs approval
@@ -235,11 +230,6 @@ export default function CommentSection({ slug }: CommentSectionProps) {
                   </div>
                 )}
 
-                {successMessage && (
-                  <div className="bg-green-50 text-green-600 text-sm p-3 rounded-lg border border-green-100 mb-4">
-                    {successMessage}
-                  </div>
-                )}
 
                 <form onSubmit={handleCommentSubmit} className="space-y-4">
                   <textarea

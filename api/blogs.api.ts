@@ -135,7 +135,7 @@ export const createComment = async (
   data: CreateCommentInput,
 ): Promise<CreateCommentResponse> => {
   const response = await api.post<CreateCommentResponse>(
-    `/comments/blog/slug/${slug}`,
+    `/comments/blog/slug/${slug}`, 
     data,
   );
   return response.data;
