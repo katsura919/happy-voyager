@@ -22,13 +22,13 @@ const footerLinks = {
     { name: "Portugal", href: "#destinations" },
     { name: "Spain", href: "#destinations" },
     { name: "Croatia", href: "#destinations" },
-    { name: "Thailand", href: "#destinations" },
+    { name: "Balkans", href: "#destinations" },
   ],
   company: [
-    { name: "About Abie", href: "#" },
+    { name: "About Abie", href: "/my-story" },
     { name: "Success Stories", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Contact", href: "#contact" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
   ],
 };
 

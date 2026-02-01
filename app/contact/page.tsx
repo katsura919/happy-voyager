@@ -132,7 +132,7 @@ export default function ContactPage() {
 
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link
-                                    href="/#services"
+                                    href="/#contact"
                                     className="px-8 py-3 rounded-full bg-[#3a3a3a] text-white font-bold hover:bg-[#e3a99c] transition-all duration-300 shadow-lg"
                                 >
                                     Start Consulting

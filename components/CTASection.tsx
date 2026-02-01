@@ -92,12 +92,12 @@ export default function CTASection() {
               </form>
 
               <p className="text-center text-white/30 text-xs mt-6">
-                We aim to respond within 24 hours. No spam, ever.
+                Message will be sent to <span className="text-white/60">hello@abiemaxey.com</span>
               </p>
             </div>
 
             {/* Floating element */}
-            <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#bbcccd] rounded-full flex items-center justify-center shadow-lg animate-pulse">
+            <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#bbcccd] rounded-full flex items-center justify-center shadow-lg">
               <Mail className="w-10 h-10 text-white" />
             </div>
           </div>
