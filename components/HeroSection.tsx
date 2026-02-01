@@ -69,7 +69,7 @@ export default function HeroSection() {
               href="#contact"
               className="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 group px-8 py-4 text-base"
             >
-              Start Your Journey
+              Get your Playbook
               <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
             </a>
             <a

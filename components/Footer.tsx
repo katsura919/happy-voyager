@@ -3,7 +3,7 @@
 import Link from "next/link";
 import {
   Instagram,
-  Twitter,
+  AtSign,
   Linkedin,
   Youtube,
   Mail,
@@ -33,10 +33,10 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Youtube, href: "#", label: "YouTube" },
+  { icon: Instagram, href: "https://www.instagram.com/abiemaxey/", label: "Instagram" },
+  { icon: AtSign, href: "https://www.threads.net/@abiemaxey", label: "Twitter" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/abiemaxey/", label: "LinkedIn" },
+  { icon: Youtube, href: "https://www.youtube.com/@abiemaxey", label: "YouTube" },
 ];
 
 export default function Footer() {
