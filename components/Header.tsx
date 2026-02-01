@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { name: "Services", href: "/#services" },
   { name: "Destinations", href: "/#destinations" },
-  { name: "Preparation", href: "/document-checklist" },
+  { name: "Free Tool", href: "/document-checklist" },
   { name: "Blogs", href: "/blog" },
   { name: "Contact", href: "/contact" },
   { name: "About", href: "/my-story" },
@@ -27,10 +27,11 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 font-[family-name:var(--font-body)] ${isScrolled
-        ? "bg-[#f9f5f2]/95 backdrop-blur-md shadow-sm py-4"
-        : "bg-transparent py-6"
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 font-[family-name:var(--font-body)] ${
+        isScrolled
+          ? "bg-[#f9f5f2]/95 backdrop-blur-md shadow-sm py-4"
+          : "bg-transparent py-6"
+      }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <nav className="flex items-center justify-between">
@@ -57,7 +58,8 @@ export default function Header() {
             ))}
 
             <Link
-              href="/#contact"
+              href="https://calendly.com/abie-gamao/spain-dnv"
+              target="_blank"
               className="px-6 py-2.5 rounded-full bg-[#3a3a3a] text-white text-sm font-semibold hover:bg-[#e3a99c] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
             >
               Let&apos;s Talk
@@ -79,8 +81,9 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden absolute top-full left-0 right-0 bg-[#f9f5f2] border-t border-[#e7ddd3] shadow-lg transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-            }`}
+          className={`md:hidden absolute top-full left-0 right-0 bg-[#f9f5f2] border-t border-[#e7ddd3] shadow-lg transition-all duration-300 overflow-hidden ${
+            isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
         >
           <div className="flex flex-col p-6 gap-6 items-center">
             {navLinks.map((link, index) => (

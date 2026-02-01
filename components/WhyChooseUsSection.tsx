@@ -1,7 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Award, Heart, Zap, MessageCircle, CheckCircle2, Volume2, VolumeX } from "lucide-react";
+import {
+  Award,
+  Heart,
+  Zap,
+  MessageCircle,
+  CheckCircle2,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
 
 const reasons = [
   {
@@ -98,9 +106,7 @@ export default function WhyChooseUsSection() {
                   key={index}
                   className="flex gap-6 group p-4 rounded-2xl hover:bg-white/50 transition-colors duration-300"
                 >
-                  <div
-                    className="flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-sm bg-white"
-                  >
+                  <div className="flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-sm bg-white">
                     <reason.icon
                       className="w-7 h-7"
                       style={{ color: reason.color }}
@@ -122,20 +128,17 @@ export default function WhyChooseUsSection() {
           {/* Right side - Visual */}
           <div className="relative lg:h-[700px] flex items-center justify-center">
             <div className="relative w-full max-w-[300px] h-[580px] sm:max-w-[350px] sm:h-[650px] lg:max-w-[380px] lg:h-[700px] mx-auto flex items-center justify-center">
-
               {/* Main Video Card */}
               <div className="absolute inset-0 bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border-[6px] sm:border-[8px] border-white transform rotate-2 z-10 hover:rotate-0 transition-transform duration-500 group">
-                {/* Phone Frame Decoration */}
-                <div className="absolute top-0 left-0 right-0 h-6 bg-white z-20 flex justify-center items-end pb-1 pointer-events-none">
-                  <div className="w-16 sm:w-20 h-3 sm:h-4 bg-gray-100 rounded-full" />
-                </div>
-
-                <div className="w-full h-full relative overflow-hidden bg-black group" onClick={togglePlay}>
+                <div
+                  className="w-full h-full relative overflow-hidden bg-black group rounded-[2rem]"
+                  onClick={togglePlay}
+                >
                   <video
                     ref={videoRef}
                     src="https://res.cloudinary.com/drpxke63n/video/upload/v1769924749/compressed-J6ARCBXq_t9uxqp.mp4"
                     poster="/assets/hero_image2.jpeg"
-                    className="w-full h-full object-cover cursor-pointer"
+                    className="w-full h-full object-cover cursor-pointer rounded-[2rem]"
                     loop
                     muted={isMuted}
                     playsInline
@@ -159,15 +162,17 @@ export default function WhyChooseUsSection() {
                     className="absolute bottom-6 right-6 z-20 bg-white/20 backdrop-blur-md p-3 rounded-full hover:bg-white/30 transition-all text-white border border-white/30 hover:opacity-100 transition-opacity"
                     aria-label={isMuted ? "Unmute" : "Mute"}
                   >
-                    {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+                    {isMuted ? (
+                      <VolumeX className="w-5 h-5" />
+                    ) : (
+                      <Volume2 className="w-5 h-5" />
+                    )}
                   </button>
                 </div>
               </div>
 
-
-
               {/* Floating Element 2: Image Card - Hidden on mobile */}
-              <div className="hidden sm:block absolute top-[15%] -right-16 lg:-right-20 w-40 h-52 lg:w-48 lg:h-60 bg-white p-2 lg:p-3 rounded-[2rem] shadow-2xl border border-white transform rotate-6 transition-transform hover:rotate-0 duration-500 z-0">
+              {/* <div className="hidden sm:block absolute top-[15%] -right-16 lg:-right-20 w-40 h-52 lg:w-48 lg:h-60 bg-white p-2 lg:p-3 rounded-[2rem] shadow-2xl border border-white transform rotate-6 transition-transform hover:rotate-0 duration-500 z-0">
                 <div className="w-full h-full rounded-[1.5rem] overflow-hidden relative">
                   <img
                     src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=800&q=80"
@@ -176,14 +181,18 @@ export default function WhyChooseUsSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   <div className="absolute bottom-4 left-4 text-white">
-                    <p className="text-[10px] lg:text-xs font-medium uppercase tracking-wider mb-1">Italy</p>
-                    <p className="font-script text-xl lg:text-2xl">Dolce Vita</p>
+                    <p className="text-[10px] lg:text-xs font-medium uppercase tracking-wider mb-1">
+                      Italy
+                    </p>
+                    <p className="font-script text-xl lg:text-2xl">
+                      Dolce Vita
+                    </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Floating Element 3: Testimonial - Adjusted for mobile */}
-              <div className="absolute -bottom-12 sm:-bottom-16 left-0 right-0 sm:-left-12 sm:-right-12 bg-white/95 backdrop-blur-xl p-4 sm:p-6 rounded-[2rem] shadow-xl border border-[#e7ddd3] animate-float-delayed z-30 scale-90 sm:scale-100">
+              {/* <div className="absolute -bottom-12 sm:-bottom-16 left-0 right-0 sm:-left-12 sm:-right-12 bg-white/95 backdrop-blur-xl p-4 sm:p-6 rounded-[2rem] shadow-xl border border-[#e7ddd3] animate-float-delayed z-30 scale-90 sm:scale-100">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-md">
                     <img
@@ -205,8 +214,7 @@ export default function WhyChooseUsSection() {
                 <p className="text-sm text-[#6b6b6b] italic leading-relaxed">
                   &quot;Finally got my D7 visa approved! Abie made the impossible paperwork feel like a breeze.&quot;
                 </p>
-              </div>
-
+              </div> */}
             </div>
           </div>
         </div>
@@ -214,4 +222,3 @@ export default function WhyChooseUsSection() {
     </section>
   );
 }
-

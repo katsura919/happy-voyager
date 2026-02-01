@@ -19,8 +19,8 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <MyStorySection />
-      <WhyChooseUsSection />
       <PlaybookPreviewSection />
+      <WhyChooseUsSection />
       <DestinationsSection />
       <ProcessSection />
       <TestimonialsSection />

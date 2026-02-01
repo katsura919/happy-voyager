@@ -38,7 +38,10 @@ export default function HeroSection() {
         {/* Radial Gradient to fade edges into background softness */}
         <div
           className="absolute inset-0"
-          style={{ background: 'radial-gradient(circle at 60% 50%, transparent 20%, #f9f5f2 100%)' }}
+          style={{
+            background:
+              "radial-gradient(circle at 60% 50%, transparent 20%, #f9f5f2 100%)",
+          }}
         />
       </div>
 
@@ -48,7 +51,9 @@ export default function HeroSection() {
           {/* Stat Pills */}
           <div className="flex flex-wrap gap-3 mb-8 animate-slide-in-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#fff4e6] shadow-sm border border-[#ffe4cc]">
-              <span className="text-xs font-bold text-[#3a3a3a] tracking-wide">Nomad Visa Consultant</span>
+              <span className="text-xs font-bold text-[#3a3a3a] tracking-wide">
+                Nomad Visa Consultant
+              </span>
             </div>
           </div>
 
@@ -61,7 +66,8 @@ export default function HeroSection() {
           </h1>
 
           <p className="font-[family-name:var(--font-body)] text-lg text-[#6b6b6b] leading-relaxed mb-10 max-w-lg animate-slide-up delay-100">
-            Get approved without a lawyer, without spiraling through forums. A step-by-step playbook from someone who did it themselves.
+            Get approved without a lawyer, without spiraling through forums. A
+            step-by-step playbook from someone who did it themselves.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 animate-slide-up delay-300">
@@ -73,17 +79,21 @@ export default function HeroSection() {
               <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="#services"
+              href="https://calendly.com/abie-gamao/spain-dnv"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 rounded-full text-[#3a3a3a] font-semibold bg-white transition-colors w-full sm:w-auto text-center border-2 border-transparent hover:border-[#e7ddd3]"
             >
-              Explore Routes
+              Book Consultation
             </a>
           </div>
         </div>
 
         {/* Right Column: Visuals - Start from line 125 */}
-        <div className="relative h-[600px] flex items-center justify-center hidden lg:flex" style={{ transform: `translate(${-mousePos.x}px, ${-mousePos.y}px)` }}>
-
+        <div
+          className="relative h-[600px] flex items-center justify-center hidden lg:flex"
+          style={{ transform: `translate(${-mousePos.x}px, ${-mousePos.y}px)` }}
+        >
           {/* Main Purple Circle (Brand Color) */}
           <div className="absolute w-[450px] h-[450px] rounded-full bg-[#E5D4FA] opacity-100" />
           {/* Using a lavender/purple tint similar to the reference but within brand logic? 
@@ -97,7 +107,10 @@ export default function HeroSection() {
           <div className="absolute w-[480px] h-[480px] rounded-full bg-[#e3a99c] shadow-2xl animate-pulse-soft" />
 
           {/* Orbiting Elements - Dashed Ring */}
-          <div className="absolute w-[600px] h-[600px] border-2 border-dashed border-[#bbcccd]/60 rounded-full animate-spin-slow pointer-events-none" style={{ animationDuration: '40s' }}>
+          <div
+            className="absolute w-[600px] h-[600px] border-2 border-dashed border-[#bbcccd]/60 rounded-full animate-spin-slow pointer-events-none"
+            style={{ animationDuration: "40s" }}
+          >
             {/* Planet 1 */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#3a3a3a] ring-4 ring-white" />
             {/* Planet 2 */}
@@ -105,12 +118,14 @@ export default function HeroSection() {
           </div>
 
           {/* Plane on Orbit */}
-          <div className="absolute w-[680px] h-[680px] rounded-full animate-spin-slow pointer-events-none" style={{ animationDuration: '30s', animationDirection: 'reverse' }}>
+          <div
+            className="absolute w-[680px] h-[680px] rounded-full animate-spin-slow pointer-events-none"
+            style={{ animationDuration: "30s", animationDirection: "reverse" }}
+          >
             <div className="absolute top-1/4 left-0 -rotate-90">
               <Plane className="w-8 h-8 text-[#3a3a3a] fill-current" />
             </div>
           </div>
-
 
           {/* Central Person Image "Cutout" Illusion */}
           {/* Since we don't have a transparent PNG, we use a rounded rectangle that matches the width 
@@ -136,7 +151,9 @@ export default function HeroSection() {
                   <CheckCircle2 className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-400 font-bold uppercase">Status</p>
+                  <p className="text-xs text-gray-400 font-bold uppercase">
+                    Status
+                  </p>
                   <p className="text-sm font-bold text-[#3a3a3a]">Approved</p>
                 </div>
               </div>
@@ -146,7 +163,6 @@ export default function HeroSection() {
           {/* Small floating dots around */}
           <div className="absolute top-20 left-20 w-4 h-4 bg-orange-300 rounded-full animate-bounce delay-100" />
           <div className="absolute bottom-40 right-10 w-3 h-3 bg-[#bbcccd] rounded-full animate-bounce delay-700" />
-
         </div>
       </div>
     </section>
