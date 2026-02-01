@@ -124,7 +124,7 @@ export default function HeroSection() {
           <div className="relative z-10 w-[400px] h-[500px] flex items-center justify-center">
             <div className="relative w-full h-full rounded-[100px] overflow-hidden border-8 border-white shadow-2xl bg-white">
               <img
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+                src="/assets/hero_image1.jpeg"
                 alt="Happy Traveler"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />

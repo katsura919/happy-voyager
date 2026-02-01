@@ -133,7 +133,7 @@ export default function Footer() {
               <li>
                 <a href="mailto:abie@happyvoyager.com" className="flex items-center gap-2 text-white/60 hover:text-[#e3a99c] transition-colors">
                   <Mail className="w-4 h-4" />
-                  <span>abie@happyvoyager.com</span>
+                  <span>hello@abiemaxey.com</span>
                 </a>
               </li>
               <li className="flex items-center gap-2 text-white/60">
