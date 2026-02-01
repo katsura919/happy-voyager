@@ -94,9 +94,6 @@ export default function DocumentChecklistPage() {
 
                 {/* Header Section */}
                 <div className="text-center mb-12">
-                    <span className="inline-block px-3 py-1 bg-[#e3a99c]/10 text-[#e3a99c] text-xs font-bold uppercase tracking-wider rounded-full mb-4">
-                        Free Tool
-                    </span>
                     <h1 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl font-bold text-[#3a3a3a] mb-4">
                         Document Preparation <br /> Checklist
                     </h1>

@@ -61,7 +61,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="font-[family-name:var(--font-body)] text-lg text-[#6b6b6b] leading-relaxed mb-10 max-w-lg animate-slide-up delay-100">
-            Navigate the complexities of second citizenships and nomad visas. We simplify the path to your borderless life.
+            Get approved without a lawyer, without spiraling through forums. A step-by-step playbook from someone who did it themselves.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 animate-slide-up delay-300">
